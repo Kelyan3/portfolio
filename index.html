@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles/index.css">
+	<title>Portfolio - MESNARD Kelyan</title>
+</head>
+
+<body>
+	<div class="background-overlay"></div>
+	<div class="scanlines"></div>
+
+	<div class="layout">
+		<aside class="sidebar">
+			<div class="profile-info">
+				<h1>Kelyan MESNARD</h1>
+				<p>Étudiant en Licence Informatique</p>
+			</div>
+
+			<nav class="menu">
+				<button class="menu-btn active" data-target="about">À propos</button>
+				<button class="menu-btn" data-target="skills">Compétences</button>
+				<button class="menu-btn" data-target="projects">Projets</button>
+				<button class="menu-btn" data-target="contact">Contact</button>
+				<div class="spacer"></div>
+				<a href="https://github.com/Kelyan3" id="quit-link" class="menu-btn link">Quitter (GitHub)</a>
+			</nav>
+		</aside>
+
+		<main class="vgui-window">
+			<div class="window-header">
+				<span id="window-title">À PROPOS</span>
+				<div class="window-controls">
+					<div class="ctrl-box"></div>
+					<div class="ctrl-box"></div>
+					<div class="ctrl-box"></div>
+				</div>
+			</div>
+
+			<div class="window-content custom-scrollbar">
+				<section id="about" class="tab-content active">
+					<p>Curieux et passionné, j'apprécie concevoir des applications, découvrir de nouveaux langages de programmation, et de mettre en oeuvre des solutions qui répondent à des besoins utilisateurs.</p>
+					<div class="server-info">
+						<p><strong>Status de connexion:</strong> En ligne</p>
+						<p><strong>Serveur actuel:</strong> Université de Nouvelle-Calédonie</p>
+						<p><strong>Ping:</strong> 1ms</p>
+					</div>
+				</section>
+
+				<section id="skills" class="tab-content">
+					<div class="skills-grid">
+						<div class="skill-item"><span>01</span> HTML/CSS (Vanilla)</div>
+						<div class="skill-item"><span>02</span> JavaScript (VanillaJS)</div>
+						<div class="skill-item"><span>03</span> React</div>
+						<div class="skill-item"><span>04</span> Langage SQL (MySQL, PostgreSQL)</div>
+						<div class="skill-item"><span>05</span> Python</div>
+					</div>
+				</section>
+
+				<section id="projects" class="tab-content">
+					<div class="project-item">
+						<div class="project-header">
+							<h3>Jeu des Cartes Logiques</h3>
+							<a href="#" class="btn-join">Rejoindre la partie</a>
+						</div>
+						<p>Le Jeu des Cartes Logiques : un jeu d'apprentissage pour travailler la logique et théorie des ensembles.</p>
+
+						<div class="tags">
+							<span class="tag">React</span>
+							<span class="tag">Python</span>
+						</div>
+					</div>
+				</section>
+
+				<section id="contact" class="tab-content">
+					<p class="contact-intro">Prêt à lancer une nouvelle partie ? Voici mes contacts :</p>
+					<div class="contact-list">
+						<div class="contact-item">
+							<span class="label">LinkedIn :</span>
+							<a href="#">/in/kmesnard</a>
+						</div>
+						<div class="contact-item">
+							<span class="label">GitHub :</span>
+							<a href="#">Kelyan3</a>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="window-footer">
+				<button class="btn-close" id="close-btn">Fermer</button>
+			</div>
+		</main>
+	</div>
+
+	<div id="quit-modal" class="modal-overlay hidden">
+		<div class="vgui-modal">
+			<div class="window-header">
+				<span>QUITTER</span>
+			</div>
+			<div class="modal-content">
+				<p>Êtes-vous sûr de vouloir quitter la partie ?</p>
+			</div>
+			<div class="window-footer modal-footer">
+				<button class="btn-confirm" id="btn-quit-yes">Oui</button>
+				<button class="btn-confirm" id="btn-quit-no">Non</button>
+			</div>
+		</div>
+	</div>
+
+	<script type="module" src="js/main.js"></script>
+</body>
+
+</html>
