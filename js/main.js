@@ -43,6 +43,21 @@ document.addEventListener("DOMContentLoaded", () => {
 	const buttonQuitYes = document.getElementById("btn-quit-yes");
 	const buttonQuitNo = document.getElementById("btn-quit-no");
 
+	const detailButtons = document.querySelectorAll(".btn-details");
+	detailButtons.forEach(button => {
+		button.addEventListener("click", () => {
+			const detailsSection = button.parentElement.nextElementSibling;
+			if (detailsSection && detailsSection.classList.contains("project-details"))
+			{
+				detailsSection.classList.toggle("hidden");
+				if (detailsSection.classList.contains("hidden"))
+					button.textContent = "Voir détails";
+				else
+					button.textContent = "Masquer détails";
+			}
+		});
+	});
+
 	if (quitLink && quitModal && buttonQuitYes && buttonQuitNo)
 	{
 		quitLink.addEventListener("click", (event) => {
